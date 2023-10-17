@@ -9,7 +9,7 @@ namespace WpfApp4
     public class CLOrders
     {
         public CLOrders() { }
-        public CLOrders(int order_id, int product_id, int quantity, int userid, int pointofissue, DateTime dataOrder, int kode) {
+        public CLOrders(int order_id, int userid, int pointofissue, string kode, DateTime dataOrder) {
             this.Order_ID = order_id;
             this.Userid = userid;
             this.Pointofissue = pointofissue;
@@ -20,7 +20,7 @@ namespace WpfApp4
         public int Userid { get; set; }
         public int Pointofissue { get; set;}
         public DateTime DataOrder { get; set; }
-        public int Kode { get; set; }
+        public string Kode { get; set; }
 
     }
 }

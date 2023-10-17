@@ -9,8 +9,7 @@ namespace WpfApp4
     public class CLUsers
     {
         public CLUsers() { }
-        public CLUsers(int usersid, string fullnameusers, string userphone, string userpassword, string kode) { 
-        
+        public CLUsers(int usersid, string fullnameusers, string userphone, string userpassword) { 
             this.Usersid = usersid;
             this.FullNameUsers = fullnameusers;
             this.Userphone = userphone;

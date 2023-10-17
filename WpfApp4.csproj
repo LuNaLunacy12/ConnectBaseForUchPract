@@ -103,6 +103,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ContentProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -118,6 +126,12 @@
     <Compile Include="ClProductsOfOrders.cs" />
     <Compile Include="CLUsers.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="ContentProducts.xaml.cs">
+      <DependentUpon>ContentProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="login.xaml.cs">
+      <DependentUpon>login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

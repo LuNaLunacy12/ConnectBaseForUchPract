@@ -1,6 +1,8 @@
-﻿using Npgsql;
+﻿
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,26 +15,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
+using System.Windows.Ink;
+using System.Data;
 using NpgsqlTypes;
-using System.Data.Common;
-using Microsoft.SqlServer.Server;
-
 
 namespace WpfApp4
 {
-    
-    public partial class MainWindow : Window
+
+    public partial class login : Page
     {
-        public MainWindow()
+        //public cmd database;
+
+        public login()
         {
             InitializeComponent();
-
-            Connection.Connect("127.0.0.1", "5432", "postgres", "ShopUL");
-            
-            frame.Navigate(new login());
+            //database = new cmd();
         }
+
         
-       
+        private void singin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void registration_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

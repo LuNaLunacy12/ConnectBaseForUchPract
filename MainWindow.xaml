@@ -7,12 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView Name="lvProduct" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding nameproduct}"></TextBlock>
-                </DataTemplate>
-            </ListView.ItemTemplate> 
-        </ListView>  
+        <Frame Name="frame" NavigationUIVisibility="Hidden"></Frame>
+        
     </Grid>
 </Window>
