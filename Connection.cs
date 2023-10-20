@@ -13,9 +13,9 @@ namespace WpfApp4
     public class Connection
     {
         public static NpgsqlConnection connection;
-        public static void Connect(string host, string port, string user, string dbname)
+        public static void Connect(string host, string port, string user, string pass, string dbname)
         {
-            string cs = $"Server={host};Port={port};User ID={user}; DataBase={dbname}";
+            string cs = $"Server={host};Port={port};User ID={user}; Password={pass}; DataBase={dbname}";
 
             connection = new NpgsqlConnection(cs);
             connection.Open();

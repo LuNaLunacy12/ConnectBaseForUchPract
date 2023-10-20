@@ -34,6 +34,13 @@ namespace WpfApp4
                 lvProduct.SetBinding(ItemsControl.ItemsSourceProperty, binding);
                 Connection.SelectTableProduct();
             }
+
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            Connection.products.Clear();
+            NavigationService.Navigate(new Uri("/login.xaml", UriKind.Relative));
+            
         }
+    }
     }
 

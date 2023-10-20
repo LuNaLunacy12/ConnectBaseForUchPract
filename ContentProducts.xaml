@@ -9,21 +9,30 @@
       Title="ContentProducts"> 
 
     <Grid>
-        <ListView Name="lvProduct">
+        <Label Content="ULOV" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" ></Label>
+        <Button Name="LogIn" Click="LogIn_Click" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Log in" Margin="0 0 15 0" Background="White" BorderThickness="0"></Button>
+        <ListView Name="lvProduct" HorizontalContentAlignment="Stretch" Margin="0 70 0 0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
+                            <ColumnDefinition ></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="{Binding Photo}" Height="60" Width="100"></Image>
+
+                        <Image Grid.Column="0" Source="{Binding Photo}" Height="100" Width="150" ></Image>
                         <StackPanel Grid.Column="1" Orientation="Vertical">
-                            <TextBlock   Text ="{Binding NameProduct}" FontSize="20" FontWeight="Bold"></TextBlock>
-                            <TextBlock   Text ="{Binding Description}" FontSize="15" ></TextBlock>
+                            <TextBlock   Text ="{Binding NameProduct}" FontSize="20"  TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+                            <TextBlock   Text ="Описание: " FontSize="10" TextWrapping="Wrap" FontWeight="Thin" HorizontalAlignment="Center"></TextBlock>
+                            <TextBlock   Text ="{Binding Description}" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+                            
+                            <TextBlock   Text ="Производитель: "  FontSize="10" TextWrapping="Wrap" FontWeight="Thin" HorizontalAlignment="Center"></TextBlock>
+                            <TextBlock   Text ="{Binding Manufactures}" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+                            <Border BorderThickness="0.3" BorderBrush="Black" Width="500"></Border>
                         </StackPanel>
-                        <TextBlock Grid.Column="2" Text="{Binding Price}" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right" DockPanel.Dock="Right"> руб.</TextBlock>
+                        <TextBlock Grid.Column="2" Text="{Binding Price}" FontSize="25" HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center"></TextBlock>
+                        
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

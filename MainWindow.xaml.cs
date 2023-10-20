@@ -28,7 +28,7 @@ namespace WpfApp4
         {
             InitializeComponent();
 
-            Connection.Connect("127.0.0.1", "5432", "postgres", "ShopUL");
+            Connection.Connect("10.14.206.27", "5432", "LAA", "1234", "k24a_463");
             
             frame.Navigate(new login());
         }
