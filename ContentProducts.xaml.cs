@@ -25,8 +25,10 @@ namespace WpfApp4
          
                 InitializeComponent();
                 lvBindingProduct();
-             
-          }
+            if (Connection.user != null) { 
+                LogIn.Content = Connection.user.Userphone;
+            }
+        }
          public void lvBindingProduct()
             {
                 Binding binding = new Binding
@@ -37,8 +39,17 @@ namespace WpfApp4
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            Connection.products.Clear();
-            NavigationService.Navigate(new Uri("/login.xaml", UriKind.Relative));
+            
+            if (Connection.user == null)
+            {
+                Connection.products.Clear();
+                NavigationService.Navigate(new Uri("/login.xaml", UriKind.Relative));
+            }
+            else
+            {
+
+            }
+           
             
         }
     }

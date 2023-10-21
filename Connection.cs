@@ -27,6 +27,7 @@ namespace WpfApp4
         public static ObservableCollection<CLPointOfIssue> points { get; set; } = new ObservableCollection<CLPointOfIssue> { };
         public static ObservableCollection<ClProductsOfOrders> productsOfOrders { get; set; } = new ObservableCollection<ClProductsOfOrders> { };
         public static ObservableCollection<CLUsers> users { get; set; } = new ObservableCollection<CLUsers> { };
+        public static CLUsers user { get; set; } 
         public static NpgsqlCommand GetCommand(string sql)
         {
             NpgsqlCommand command = new NpgsqlCommand();

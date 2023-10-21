@@ -45,7 +45,7 @@ namespace WpfApp4
             {
                 while (result.Read())
                 {
-                    Connection.users.Add(new CLUsers(result.GetInt32(0), result.GetString(1), result.GetString(2), result.GetString(3)));
+                    Connection.user = new CLUsers(result.GetInt32(0), result.GetString(1), result.GetString(2), result.GetString(3));
                 }
             }
             result.Close();
@@ -60,7 +60,9 @@ namespace WpfApp4
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ContentProducts.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/ContentProducts.xaml", UriKind.Relative));
+            
+            
         }
 
     }
