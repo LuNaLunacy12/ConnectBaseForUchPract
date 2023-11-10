@@ -28,7 +28,7 @@ namespace WpfApp4
             if (Connection.user != null) { 
                 LogIn.Content = Connection.user.Userphone;
             }
-           
+            
         }
          public void lvBindingProduct()
             {
@@ -36,6 +36,7 @@ namespace WpfApp4
                 { Source = Connection.products };
                 lvProduct.SetBinding(ItemsControl.ItemsSourceProperty, binding);
                 Connection.SelectTableProduct();
+           
             }
 
         private void LogIn_Click(object sender, RoutedEventArgs e)

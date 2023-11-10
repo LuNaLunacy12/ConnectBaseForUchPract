@@ -25,8 +25,8 @@
 
             <Label Content="Логин" Foreground="DimGray" FontSize="25" FontWeight="DemiBold" HorizontalAlignment="Center"></Label>
 
-            <TextBox x:Name="loginus" HorizontalAlignment="Center" Height="30" Width="250" Padding="3" FontSize="15">
-                <TextBox.Resources>
+            <TextBox Name="loginus" HorizontalAlignment="Center" Height="30" Width="250" Padding="3" FontSize="15" >
+                    <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="12"/>
                     </Style>

@@ -21,11 +21,11 @@ using NpgsqlTypes;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
-
+using Color = System.Drawing.Color;
 
 namespace WpfApp4
 {
-
+   
     public partial class login : Page
     {
     [DllImport("gdi32.dll", EntryPoint = "DeleteObject")]
@@ -46,9 +46,9 @@ namespace WpfApp4
         {
             InitializeComponent();
             CaptchaPicture.Source = ImageSourceFromBitmap(CreateImage((int)CaptchaPicture.Width, (int)CaptchaPicture.Height));
+            
         }
 
-        
         private void singin_Click(object sender, RoutedEventArgs e)
         {
             if (CapthaBox.Text == this.text)
@@ -134,7 +134,7 @@ namespace WpfApp4
             ////Белые точки
             for (int i = 0; i < Width; ++i)
                 for (int j = 0; j < Height; ++j)
-                    if (rnd.Next() % 20 == 0)
+                    if (rnd.Next() % 25 == 0)
                         result.SetPixel(i, j, System.Drawing.Color.White);
             return result;
         }
