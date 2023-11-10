@@ -29,6 +29,9 @@
                             
                             <TextBlock   Text ="Производитель: "  FontSize="10" TextWrapping="Wrap" FontWeight="Thin" HorizontalAlignment="Center"></TextBlock>
                             <TextBlock   Text ="{Binding Manufactures}" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+
+                            <TextBlock Text="Остаток на складе: " FontSize="10" TextWrapping="Wrap" FontWeight="Thin" HorizontalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding Quantity}"  FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center" Name="QuantityFromSklad"></TextBlock>
                             <Border BorderThickness="0.3" BorderBrush="Black" Width="500"></Border>
                         </StackPanel>
                         <TextBlock Grid.Column="2" Text="{Binding Price}" FontSize="25" HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center"></TextBlock>

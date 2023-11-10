@@ -28,6 +28,7 @@ namespace WpfApp4
             if (Connection.user != null) { 
                 LogIn.Content = Connection.user.Userphone;
             }
+           
         }
          public void lvBindingProduct()
             {

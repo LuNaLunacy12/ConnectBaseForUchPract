@@ -47,7 +47,7 @@ namespace WpfApp4
                 {
                     products.Add(new CLProducts(result.GetInt32(0), result.GetString(1), result.GetString(2), result.GetString(3), result.GetInt32(4), result.GetInt32(5), result.GetString(6), result.GetInt32(7)));
                 }
-
+                
             }
             result.Close();
         }
